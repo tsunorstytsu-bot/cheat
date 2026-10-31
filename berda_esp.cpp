@@ -34,7 +34,7 @@ typedef tClass   (*fn_class_get_parent)(tClass);
 typedef tMethod  (*fn_class_get_method_from_name)(tClass, const char*, int);
 typedef tType    (*fn_class_get_type)(tClass);
 typedef tObject  (*fn_type_get_object)(tType);
-typedef tObject  (*fn_runtime_invoke)(tMethod, tObject, void**, tException**);
+typedef tObject  (*fn_runtime_invoke)(tMethod, tObject, void**, tException*);
 typedef tObject  (*fn_object_unbox)(tObject);
 typedef tString  (*fn_string_new)(const char*);
 typedef tClass   (*fn_object_get_class)(tObject);
