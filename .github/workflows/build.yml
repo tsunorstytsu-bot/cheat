@@ -10,10 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: List files
-        shell: cmd
-        run: dir /b
-
       - name: Setup MSVC
         uses: ilammy/msvc-dev-cmd@v1
         with:
@@ -21,7 +17,7 @@ jobs:
 
       - name: Compile
         shell: cmd
-        run: cl /LD /O2 /EHsc berda_esp.cpp /link user32.lib gdi32.lib /OUT:berda_esp.dll
+        run: cl /LD /O2 /EHsc /utf-8 berda_esp.cpp /link user32.lib gdi32.lib /OUT:berda_esp.dll
 
       - name: Upload
         uses: actions/upload-artifact@v4
